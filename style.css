@@ -1,17 +1,177 @@
-/* fonts */
+/* Fonts */
+@font-face {
+  font-family: "Bungee";
+  src: url("/fonts/Bungee-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/Oswald-Regular.ttf") format("truetype");
+}
 
-
-/* site colour palette */
+/* Variables */
 :root {
-    --color: 
+  --primary-color: #ff9800; /* Orange */
+  --secondary-color: #4caf50; /* Green */
+  --accent-color: #ffc107; /* Amber for contrast */
+  --bg-color: #1b1b1b;
+  --text-color: #ffffff;
+  --header-bg: #333333;
+  --header-text: #ffffff;
+  --link-hover: #ff5722; /* Deep Orange */
+  --focus-outline: 2px solid #4caf50;
+  --button-bg: #ff9800; /* Button background color */
+  --button-text: #ffffff; /* Button text color */
 }
 
-
-/* generic style reset */
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-/* add your own style rules here */
+/* Header & Navigation */
+header {
+  background: linear-gradient(135deg, var(--header-bg), #444444);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.5);
+}
+header h1 {
+  color: var(--header-text);
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(255, 152, 0, 0.7);
+  font-family: "Bungee", sans-serif;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+}
+nav a:hover {
+  color: var(--link-hover);
+  transform: translateY(-2px);
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: var(--link-hover);
+  transition: width 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Accessibility */
+nav a:focus,
+button:focus,
+input:focus {
+  outline: var(--focus-outline);
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: var(--header-text);
+  padding: 8px;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-color: #000;
+  --text-color: #fff;
+  --header-bg: #000;
+  --link-hover: #ff5722;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  text-align: center;
+}
+main h1 {
+  font-size: 3rem;
+  font-family: "Bungee", sans-serif;
+}
+main p {
+  font-size: 1.2rem;
+}
+
+/* Contrast Toggle */
+.contrast-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background: var(--primary-color);
+  color: var(--header-text);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #2c2c2c;
+  border-radius: 10px;
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #444;
+  color: #fff;
+}
+form input[type="submit"] {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form input[type="submit"]:hover {
+  background: var(--link-hover);
+}

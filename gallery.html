@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore our photo gallery showcasing the thrilling moments of Ultra Bungee jumps. Witness the excitement and adrenaline captured in each shot."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+
+    <title>Photo Gallery | Ultra Bungee</title>
+  </head>
+  <body style="font-family: 'Montserrat', sans-serif">
+    <!-- Skip Navigation Link (for screen readers) -->
+    <a
+      href="#main-content"
+      class="skip-link"
+      style="font-family: 'Oswald', sans-serif"
+      >Skip to main content</a
+    >
+
+    <!-- High Contrast Toggle Button -->
+    <button
+      class="contrast-toggle"
+      aria-label="Toggle high contrast mode"
+      style="font-family: 'Oswald', sans-serif"
+    >
+      Toggle High Contrast
+    </button>
+
+    <header role="banner">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li>
+            <a href="index.html" style="font-family: 'Oswald', sans-serif"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="bridge.html" style="font-family: 'Oswald', sans-serif"
+              >Bridge Jump</a
+            >
+          </li>
+          <li>
+            <a href="gallery.html" style="font-family: 'Oswald', sans-serif"
+              >Photo Gallery</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" style="font-family: 'Oswald', sans-serif"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" role="main">
+      <h1 style="font-family: 'Bungee', sans-serif">Photo Gallery</h1>
+      <section aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" class="visually-hidden">Gallery</h2>
+        <p>
+          Welcome to our photo gallery! Here you'll find a collection of images
+          capturing the exhilarating moments of our bungee jumps. Click on any
+          image to view it in full size.
+        </p>
+        <div class="gallery">
+          <figure>
+            <img src="images/jump1.jpg" alt="Bungee jump from the bridge" />
+            <figcaption>Bungee jump from the bridge</figcaption>
+          </figure>
+          <figure>
+            <img src="images/jump2.jpg" alt="Mid-air excitement" />
+            <figcaption>Mid-air excitement</figcaption>
+          </figure>
+          <figure>
+            <img src="images/jump3.jpg" alt="Group jump celebration" />
+            <figcaption>Group jump celebration</figcaption>
+          </figure>
+          <figure>
+            <img src="images/jump4.jpg" alt="Sunset bungee jump" />
+            <figcaption>Sunset bungee jump</figcaption>
+          </figure>
+          <!-- Added new images -->
+          <figure>
+            <img src="images/jump5.jpg" alt="Night bungee jump" />
+            <figcaption>Night bungee jump</figcaption>
+          </figure>
+          <figure>
+            <img src="images/jump6.jpg" alt="Bungee jump over water" />
+            <figcaption>Bungee jump over water</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

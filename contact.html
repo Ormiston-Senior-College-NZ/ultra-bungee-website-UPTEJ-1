@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Experience the thrill of Ultra Bungee! Jump from iconic bridges, explore our photo gallery, and book your adventure today."
+      content="Get in touch with Ultra Bungee for any inquiries, bookings, or feedback. We're here to help you with your bungee jumping adventure."
     />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="script.js" defer></script>
 
-    <title>Ultra Bungee | Adventure Jumps, Photo Gallery & Bookings</title>
+    <title>Contact Us | Ultra Bungee</title>
   </head>
   <body style="font-family: 'Montserrat', sans-serif">
     <!-- Skip Navigation Link (for screen readers) -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a
+      href="#main-content"
+      class="skip-link"
+      style="font-family: 'Oswald', sans-serif"
+      >Skip to main content</a
+    >
 
     <!-- High Contrast Toggle Button -->
     <button
@@ -53,35 +58,32 @@
     </header>
 
     <main id="main-content" role="main">
-      <h1 style="font-family: 'Bungee', sans-serif">
-        Experience the Thrill of Ultra Bungee!
-      </h1>
-      <section aria-labelledby="intro-heading">
-        <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
-        <p>
-          Get ready for an unforgettable adventure with our unique bungee
-          jumping experiences. Jump from iconic bridges and capture the moment
-          with our professional photographers.
-        </p>
-      </section>
-      <section aria-labelledby="safety-heading">
-        <h2 id="safety-heading" style="font-family: 'Bungee', sans-serif">
-          Safety First
+      <h1 style="font-family: 'Bungee', sans-serif">Contact Us</h1>
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="visually-hidden">
+          Contact Information
         </h2>
         <p>
-          Your safety is our top priority. We use state-of-the-art equipment and
-          follow strict safety protocols to ensure a secure and exhilarating
-          jump.
+          Have questions or need more information? Reach out to us using the
+          form below, and we'll get back to you as soon as possible.
         </p>
-      </section>
-      <section aria-labelledby="booking-heading">
-        <h2 id="booking-heading" style="font-family: 'Bungee', sans-serif">
-          Book Your Adventure
-        </h2>
-        <p>
-          Ready to take the leap? Book your bungee jumping adventure today and
-          experience the thrill of a lifetime.
-        </p>
+        <form action="submit_form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" style="font-family: 'Oswald', sans-serif">
+            Submit
+          </button>
+        </form>
       </section>
     </main>
   </body>
