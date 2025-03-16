@@ -25,6 +25,8 @@
   --focus-outline: 2px solid #4caf50;
   --button-bg: #ff9800; /* Button background color */
   --button-text: #ffffff; /* Button text color */
+  --footer-bg: #222222; /* Footer background color */
+  --footer-text: #cccccc; /* Footer text color */
 }
 
 /* Global Styles */
@@ -174,4 +176,42 @@ form input[type="submit"] {
 }
 form input[type="submit"]:hover {
   background: var(--link-hover);
+}
+
+/* Gallery Styles */
+.gallery img {
+  border-radius: 5px; /* Reduced rounding for a cleaner look */
+  width: 300px; /* Set a fixed width for uniformity */
+  height: 200px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  transition: transform 0.3s; /* Added transition for smooth scaling effect */
+}
+
+.gallery img:hover {
+  transform: scale(
+    1.05
+  ); /* Slightly scale up the image on hover for a zoom effect */
+}
+
+.gallery {
+  display: flex; /* Use flexbox for better layout */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  justify-content: center; /* Center the images in the gallery */
+  gap: 10px; /* Reduced space between images for a cleaner layout */
+}
+
+/* Footer Styles */
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }
